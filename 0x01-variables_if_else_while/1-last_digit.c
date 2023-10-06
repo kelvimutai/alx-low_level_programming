@@ -1,30 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point
  *
- * Description: This function prints numbers with leading zeros for positive
- * and negative integers with two and three digits.
+ * Description: This program prints the last digit of a random number
+ * and checks if it's greater than 5, less than 6, or equal to 0.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n = 98;
+	int n;
+	int lastDigit;
 
-	if (n < 0)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	lastDigit = n % 10;
+
+	printf("Last digit of %d is %d", n, lastDigit);
+
+	if (lastDigit > 5)
 	{
-		putchar('-');
-		n = -n;
+		printf(" and is greater than 5\n");
 	}
-
-	if (n < 10)
-		putchar('0');
-
-	if (n < 100)
-		putchar('0');
-
-	printf("%d\n", n);
+	else if (lastDigit == 0)
+	{
+		printf(" and is 0\n");
+	}
+	else
+	{
+		printf(" and is less than 6 and not 0\n");
+	}
 
 	return (0);
 }
