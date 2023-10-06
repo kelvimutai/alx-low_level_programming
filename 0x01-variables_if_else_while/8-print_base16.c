@@ -21,8 +21,9 @@ int main(void)
 		{
 			putchar('a' + (i - 10));
 		}
-		putchar('\n');
 	}
+
+	putchar('\n');
 
 	return (0);
 }
