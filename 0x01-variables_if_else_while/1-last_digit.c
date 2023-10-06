@@ -1,40 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
  * main - Entry point
  *
- * Description: Generate random numbers and print information about their last digits.
+ * Description: This function prints numbers with leading zeros for positive
+ * and negative integers with two and three digits.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int n;
-    int lastDigit;
+	int n = 98;
 
-    srand(time(0));
+	if (n < 0)
+	{
+		putchar('-');
+		n = -n;
+	}
 
-    n = rand();
+	if (n < 10)
+		putchar('0');
 
-    lastDigit = n % 10;
+	if (n < 100)
+		putchar('0');
 
-    printf("Last digit of %d is %d and is ", n, lastDigit);
+	printf("%d\n", n);
 
-    if (lastDigit > 5)
-    {
-        printf("greater than 5\n");
-    }
-    else if (lastDigit == 0)
-    {
-        printf("0\n");
-    }
-    else
-    {
-        printf("less than 6 and not 0\n");
-    }
-
-    return (0);
+	return (0);
 }
-
