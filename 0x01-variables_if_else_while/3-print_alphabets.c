@@ -3,29 +3,30 @@
 /**
  * main - Entry point
  *
- * Description: Prints the lowercase alphabet followed by uppercase,
+ * Description:
+ * Prints the lowercase alphabet followed by uppercase letters
  * and a newline using putchar only three times.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char c = 'a';
-    char d = 'A';
+	char c = 'a';
+	char d = 'A';
 
-    while (c <= 'z')
-    {
-        putchar(c);
-        c++;
-    }
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
 
-    while (d <= 'Z')
-    {
-        putchar(d);
-        d++;
-    }
+	while (d <= 'Z')
+	{
+		putchar(d);
+		d++;
+	}
 
-    putchar('\n');
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
