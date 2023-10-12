@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <limits.h>
+
 /**
  * _abs - Computes the absolute value of an integer.
  * @n: The integer to find the absolute value of.
