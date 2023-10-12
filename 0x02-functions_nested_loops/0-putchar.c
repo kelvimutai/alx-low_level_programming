@@ -1,21 +1,20 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
- * main - Entry point
- *
- *
- * Return: 0 on success
- */
+  * main - Entry point of my code,
+  *
+  * Return: Always 0
+  */
 int main(void)
 {
-	char holberton[] = "Holberton\n";
-	int i;
-
-	for (i = 0; holberton[i] != '\0'; i++)
-	{
-		write(1, &holberton[i], 1);
-	}
-
-	return (0);
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
+return (0);
 }
