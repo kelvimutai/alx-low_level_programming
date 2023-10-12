@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int a = 1;
-    int b = 2;
-    int count = 2;  /* We've already got the first two numbers (1 and 2) */
+    long long a = 1;
+    long long b = 2;
+    int count = 2;  // We've already got the first two numbers (1 and 2)
 
-    printf("%d, %d, ", a, b);
+    printf("%lld, %lld, ", a, b);
 
     while (count < 98) {
-        int next = a + b;
+        long long next = a + b;
         a = b;
         b = next;
 
         count++;
 
         if (count < 98) {
-            /* Print a comma and a space for all elements except the last one */
-            printf("%d, ", next);
+            // Print a comma and a space for all elements except the last one
+            printf("%lld, ", next);
         } else {
-            /* Print a new line for the last element */
-            printf("%d\n", next);
+            // Print a new line for the last element
+            printf("%lld\n", next);
         }
     }
 
