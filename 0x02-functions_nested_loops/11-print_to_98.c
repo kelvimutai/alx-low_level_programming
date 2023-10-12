@@ -4,7 +4,6 @@
  * print_to_98 - Print all natural numbers from n to 98.
  * @n: The starting number.
  */
-void print_to_98(int n)
 {
 	if (n <= 98)
 	{
@@ -38,20 +37,4 @@ void print_to_98(int n)
 			}
 		}
 	}
-}
-
-/**
- * main - Entry point of the program.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int num;
-
-	printf("Enter a number: ");
-	scanf("%d", &num);
-	print_to_98(num);
-
-	return (0);
 }
