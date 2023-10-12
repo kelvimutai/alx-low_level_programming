@@ -1,26 +1,24 @@
 #include "main.h"
 
 /**
- * _putchar - Writes a character to stdout.
- * @c: The character to be written.
- *
- * Return: 1 on success, -1 on failure.
- */
+  * print_alphabet_x10 - Make alphabet x10 times
+  *
+  * Return: void
+  */
 void print_alphabet_x10(void)
 {
-	int i, j;
-	char letter;
+	char c;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
+	while (i <= 9)
 	{
-		letter = 'a';
-
-		for (j = 0; j < 26; j++)
+		for (c = 'a'; c <= 'z'; c++)
 		{
-			_putchar(letter);
-			letter++;
+			_putchar(c);
 		}
 
 		_putchar('\n');
+
+		i++;
 	}
 }
