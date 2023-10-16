@@ -1,28 +1,28 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    char expectedPassword[] = "Tada! Congrats";
-    char generatedPassword[sizeof(expectedPassword)];
-    int passwordLength = sizeof(expectedPassword) - 1;
+#define PASSWORD_LENGTH 12
 
+char generateRandomChar() {
+    return (rand() % 94) + 32;
+}
+
+void generateRandomPassword(char *password, int length) {
+    int i;
+    for (i = 0; i < length; i++) {
+        password[i] = generateRandomChar();
+    }
+    password[length] = '\0';
+}
+
+int main() {
+    char password[PASSWORD_LENGTH + 1];
     srand(time(NULL));
 
-    int i;
-    for (i = 0; i < passwordLength; i++) {
-        generatedPassword[i] = (rand() % 94) + 32;
-    }
-    generatedPassword[passwordLength] = '\0';
-
-    if (strcmp(generatedPassword, expectedPassword) == 0) {
-        printf("Generated Password: %s\n", generatedPassword);
-        printf("Password Match: Tada! Congrats\n");
-    } else {
-        printf("Generated Password: %s\n", generatedPassword);
-        printf("Wrong password\n");
-    }
+    generateRandomPassword(password, PASSWORD_LENGTH);
+    
+    printf("Generated Password: %s\n", password);
 
     return 0;
 }
