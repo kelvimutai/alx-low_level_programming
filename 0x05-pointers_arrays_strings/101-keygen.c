@@ -9,7 +9,7 @@ char generateRandomChar() {
 }
 
 void generateRandomPassword(char *password, int length) {
-    int i; // Declare 'i' before the 'for' loop
+    int i; /* Declare 'i' before the 'for' loop */
     for (i = 0; i < length; i++) {
         password[i] = generateRandomChar();
     }
