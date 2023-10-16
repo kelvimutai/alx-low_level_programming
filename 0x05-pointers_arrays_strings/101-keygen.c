@@ -5,19 +5,16 @@
 
 int main() {
     char expectedPassword[] = "Tada! Congrats";
+    char generatedPassword[sizeof(expectedPassword)];
+    int passwordLength = sizeof(expectedPassword) - 1;
 
-    // Seed the random number generator with the current time
     srand(time(NULL));
 
-    char generatedPassword[sizeof(expectedPassword)];
-    int passwordLength = sizeof(expectedPassword) - 1; // -1 for the null terminator
-
     for (int i = 0; i < passwordLength; i++) {
-        generatedPassword[i] = (rand() % 94) + 32; /* Generate a random printable ASCII character */
+        generatedPassword[i] = (rand() % 94) + 32;
     }
-    generatedPassword[passwordLength] = '\0'; // Null-terminate the string
+    generatedPassword[passwordLength] = '\0';
 
-    // Check if the generated password matches the expected password
     if (strcmp(generatedPassword, expectedPassword) == 0) {
         printf("Generated Password: %s\n", generatedPassword);
         printf("Password Match: Tada! Congrats\n");
