@@ -10,7 +10,8 @@ int main() {
 
     srand(time(NULL));
 
-    for (int i = 0; i < passwordLength; i++) {
+    int i;
+    for (i = 0; i < passwordLength; i++) {
         generatedPassword[i] = (rand() % 94) + 32;
     }
     generatedPassword[passwordLength] = '\0';
