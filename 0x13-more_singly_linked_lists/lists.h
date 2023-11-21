@@ -1,6 +1,7 @@
 #ifndef _S_LINK_LISTS_
 #define _S_LINK_LISTS_
 
+
 /**
  * struct listint_s - singly linked list
  * @n: integer
